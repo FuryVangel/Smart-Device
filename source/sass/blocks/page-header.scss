@@ -1,4 +1,4 @@
-.page-header {
+.page-header__wrapper {
         width: 100%;
         padding-top: 1px;
         background-color: $hero-bg-color;
@@ -13,7 +13,7 @@
        }
 }
 
-.page-header__wrapper {
+.page-header{
         display: flex;
         margin: auto;
         justify-content: space-between;
@@ -135,7 +135,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-        .page-header {
+        .page-header__wrapper {
                 background-image: url("../img/printboard-tablet.png"), url("../img/hero-mask-tablet.png");
                 background-position: right calc(50% - 225px) top -39px, center 0;
 
@@ -198,7 +198,7 @@
 }
 
 @media screen and (max-width: 767px) {
-        .page-header {
+        .page-header__wrapper {
                 background-image: url("../img/printboard-mobile.png"), url("../img/hero-mask-tablet.png");
                 background-position: right calc(50% - 125px) top -190px, center 0;
 
@@ -208,7 +208,7 @@
                 }
         }
 
-        .page-header__wrapper {
+        .page-header {
                 margin-top: 16px;
                 padding: 0 15px;
         }
