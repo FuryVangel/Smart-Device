@@ -1,0 +1,184 @@
+.hero {
+        margin-bottom: 50px;
+}
+
+.hero__title {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 236px auto 0;
+        padding: 0 27px 90px;
+        max-width: 1464px;
+        z-index: 10;
+
+        h1 {                
+                flex-direction: row;
+                font-size: 5rem;
+                color: $white;
+                font-family: "Roboto Condensed", "Arial", sans-serif;
+                letter-spacing: 7.4px;
+                text-transform: uppercase;
+                padding-bottom: 30px;
+        }
+
+        p {
+                font-family: "PT Mono", "Arial", sans-serif;
+                color: $white;
+                font-weight: 400;
+                font-size: 22px;
+                position: relative;
+                line-height: 156.8%;
+                margin-left: 120px;                
+                width: 620px;
+                padding-bottom: 45px;
+
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  width: 66px;
+                  height: 2px;
+                  background-color: #ffffff;
+                  left: -115px;
+                  top: 15px;
+                }
+        }
+}
+
+.hero__button {
+        font-size: 1em;
+        font-weight: bold;
+        background-color: $accent-color;
+        padding: 20px 27px;
+        letter-spacing: .9px;
+        margin: 0 0 0 120px;
+        width: 379px;
+        border: $accent-color;
+
+        &:hover,
+        &:focus {
+                background: $white;
+                color: $hero-bg-color;
+        }
+
+        &:active {
+                opacity: 0.7;
+        }
+}
+
+.hero__button-mobile {
+        display: none;
+}
+
+.hero__scroll {
+        width: 100px;
+        font-size: 0.875em;
+        font-family: "PT Mono", "Arial", sans-serif;
+        font-weight: 400;
+        transform: rotate(-90deg);
+        color: $white;
+        opacity: 0.5;
+        margin: 170px 0 0 13px;
+        transform-origin: left bottom;
+
+        &:hover {
+                opacity: 1;
+        }
+
+        &:active {
+                color: $accent-color;
+                outline: none;
+        }
+}
+
+@media screen and (max-width: 1023px) {
+        .hero {
+          margin-bottom: 0;
+        }
+
+        .hero__title {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                margin: 116px 0 0 66px;
+                padding: 0 27px 90px;
+                max-width: 1464px;
+                z-index: 10;
+
+                h1 {                
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 3.75rem;
+                        margin-bottom: 0;
+                }
+
+                p {
+                        font-size: 1.125em;
+                        position: relative;
+                        margin-left: 50px;                
+                        width: 356px;
+                        padding-bottom: 45px;
+
+                        &::before {
+                                width: 33px;
+                                left: -45px;
+                                top: 12px;
+                        }
+                }
+        
+        }
+
+        .hero__button {
+                margin-left: 50px; 
+                width: 379px;          
+        }
+
+        .hero__scroll {
+                display: none;
+        }
+}
+
+@media screen and (max-width: 767px) {
+        .hero__title {
+                margin: 250px 0 0 0;
+                padding: 0 16px 71px;
+                max-width: 1464px;
+                z-index: 10;
+
+                h1 { 
+                        font-size: 2.5rem;
+                        letter-spacing: 3px;
+                        margin-bottom: 30px;
+                        margin-left: 0;
+                }
+
+                p {
+                        font-size: 1em;
+                        line-height: 25px;
+                        position: relative;
+                        margin-left: 50px;                
+                        width: 245px;
+                        padding-bottom: 45px;
+
+                        &::before {
+                                width: 33px;
+                                left: -45px;
+                                top: 12px;
+                        }
+                }
+        
+        }
+
+        .hero__button {
+                margin: 0; 
+                width: 285px;          
+        }
+
+        .hero__button-desktop {
+                display: none;
+        }
+
+        .hero__button-mobile {
+                display: block;
+        }
+}

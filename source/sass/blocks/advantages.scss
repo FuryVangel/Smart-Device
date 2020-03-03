@@ -1,0 +1,127 @@
+.advantages {
+        padding-top: 59px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.advantages__list > li {
+        margin-bottom: 30px;
+}
+
+.advantages__item {
+        flex-direction: column;
+        width: 48.6%;
+        min-height: 300px;
+        padding: 73px 40px 64px;
+        border: 1px solid $border-color;
+        border-left: 3px solid $accent-color;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+                background-color: $accent-color;
+                color: $white;                
+
+                h3, p {
+                        color: inherit;
+                        transition: all 0.2s;
+                }
+
+                svg {
+                        fill: $white;
+                        transition: all 0.2s;
+                }
+        }
+
+        &:active {
+                opacity: 0.7;
+        }
+
+        h3 {
+                font-size: 1.5em;
+                font-weight: 400;
+                color: $accent-color;
+                line-height: 21.4px;
+                margin: 20px 0;
+        }
+
+        p {
+                font-size: 1em;
+                font-family: "PT Mono", "Arial", sans-serif;
+                line-height: 21.4px;
+                color: $text-color;
+        }
+
+        svg {
+                fill: $accent-color;
+        }
+}
+
+.advantages__icon {
+        fill: $accent-color;
+        position: absolute;
+        height: 36px;
+        top: 39px;
+
+        &:hover {
+                fill: $white;
+        }
+}
+
+@media screen and (max-width: 1023px) {
+        .advantages {
+          padding-top: 0;
+        }
+
+        .advantages__list {
+                margin-top: 54px;
+                margin-bottom: 25px;
+        }
+
+        .advantages__item {
+          min-height: 232px;
+          padding: 59px 21px 25px 24px;
+
+          h3 {
+            font-size: 1.5em;
+            color: $accent-color;
+            line-height: 21.4px;
+            margin: 9px 0;
+          }
+
+          p {
+            line-height: 21.5px;
+          }
+        }
+
+        .advantages__icon {
+                top: 23px;
+        }
+}
+
+@media screen and (max-width: 767px) {
+        .advantages__list {
+                margin-top: 37px;
+        }
+
+        .advantages__list {
+          flex-direction: column;
+        }
+
+        .advantages__item {
+          width: 100%;
+          min-height: 232px;
+          padding: 59px 21px 25px 24px;
+          margin: 0 auto;
+
+          p {
+            font-size: 1em;
+          }
+        }
+}

@@ -1,0 +1,127 @@
+.form {
+  margin-bottom: 20px;        
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 14px 16px;
+  background-color: #19baff;
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $white;
+
+  &::placeholder {
+    color: $white;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #32C1FF;
+  }
+}
+
+input {
+  height: 50px;
+}
+
+textarea {
+  min-height: 154px;
+  resize: none;
+}
+
+.form__agreement {
+  display: flex;
+  align-items: center;
+}
+
+.form__btn {
+  padding: 15px 0;
+  min-width: 270px;
+  margin-right: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  padding-left: 30px;
+  font-size: 0.875em;
+  opacity: 0.8;
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    transition: all 0.2s;
+  }
+}
+
+[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+}
+
+[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  display: none;
+  width: 9px;
+  height: 6px;
+  background: url("../img/icons/icon-check.svg") center no-repeat transparent;
+}
+
+[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+[type="checkbox"]:focus + label::before {
+  box-shadow: 1px 1px 1px 1px rgba(5, 51, 54, 0.25);
+}
+
+@media screen and (max-width: 1023px) {
+  textarea {
+  margin-bottom: 48px;
+  min-height: 164px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  input {
+          margin-bottom: 33px;
+  }
+
+  textarea {
+          min-height: 100px;
+          margin-bottom: 32px;
+  }
+
+  .form__agreement {
+          flex-direction: column;
+  }
+
+  .form__btn {
+          margin: 0 0 30px;
+  }
+}

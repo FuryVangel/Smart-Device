@@ -1,0 +1,95 @@
+.about {
+  max-width: 988px;
+  margin-left: 180px;
+  position: relative;
+  padding-bottom:  102px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 218px;
+    height: 317px;
+    left: -213px;
+    background-image: url("../img/2005.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/2005@x2.png");
+      background-size: 220px 317px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.about h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+  line-height: 140.6%;
+  display: block;
+}
+
+.about p {
+        font-size: 1em;
+        font-family: "PT Mono", "Arial", sans-serif;
+        font-weight: 400;
+        margin: 0 0 20px;
+        line-height: 21.4px;
+}
+
+.about__btn {
+        color: $accent-color;
+        width: 180px;
+        padding: 14px 10px;
+        border: 1px solid $accent-color;
+        margin-top: 40px;
+
+        &:hover {
+                background-color: $accent-color;
+                color: $white;
+        }
+
+        &:active {
+                opacity: 0.7;
+        }
+}
+
+@media screen and (max-width: 1023px) {
+        .about {
+          margin-left: 188px;     
+          padding-bottom: 80px;
+
+          &::before {
+            height: 359px;
+            background-image: url("../img/2005-tablet.png");
+
+            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+              background-image: url("../img/2005-tablet@x2.png");
+              background-size: 244px 359px;
+            }
+          }
+        }
+
+        .about p + p::after {
+                content: "\2026";           
+        }
+
+        .about__hidden {
+          display: none;
+          position: relative;
+        }        
+}
+
+@media screen and (max-width: 767px) {
+        .about {
+          width: 100%;
+          margin-left: 0;
+          position: relative;
+          padding-bottom: 65px;
+
+          &::before {
+            content: "";
+            display: none;
+          }
+        }
+}
