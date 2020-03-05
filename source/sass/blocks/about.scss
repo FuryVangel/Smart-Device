@@ -33,7 +33,7 @@
         font-size: 1em;
         font-family: "PT Mono", "Arial", sans-serif;
         font-weight: 400;
-        margin: 0 0 20px;
+        margin: 0 0 25px;
         line-height: 21.4px;
 }
 
@@ -55,41 +55,71 @@
 }
 
 @media screen and (max-width: 1023px) {
-        .about {
-          margin-left: 188px;     
-          padding-bottom: 80px;
+  .about {
+    margin-left: 188px;     
+    padding-bottom: 80px;
 
-          &::before {
-            height: 359px;
-            background-image: url("../img/2005-tablet.png");
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 28px;
+    }
 
-            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-              background-image: url("../img/2005-tablet@x2.png");
-              background-size: 244px 359px;
-            }
-          }
-        }
+    &::before {
+      height: 359px;
+      background-image: url("../img/2005-tablet.png");
 
-        .about p + p::after {
-                content: "\2026";           
-        }
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005-tablet@x2.png");
+        background-size: 244px 359px;
+      }
+    }
+  }
 
-        .about__hidden {
-          display: none;
-          position: relative;
-        }        
+  .about p + p::after {
+    content: "\2026";           
+  }
+
+  .about__hidden {
+    display: none;
+    position: relative;
+  }        
+
+  .about__btn {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-        .about {
-          width: 100%;
-          margin-left: 0;
-          position: relative;
-          padding-bottom: 65px;
+  .about {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+    padding-bottom: 65px;
+    padding-left: 5px;
 
-          &::before {
-            content: "";
-            display: none;
-          }
-        }
+    &::before {
+      content: "";
+      display: none;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 130%;
+      letter-spacing: -1.3px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin: 0 0 43px;
+      line-height: 22px;
+    }
+
+    p + p {
+      margin: 0;
+    }
+  }
+
+  .about__btn {
+    margin-top: 32px;
+  }
 }

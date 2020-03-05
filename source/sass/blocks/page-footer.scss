@@ -28,7 +28,7 @@
 }
 
 .page-footer__content {
-        padding: 64px 25px 57px;
+        padding: 46px 25px 57px;
        justify-content: space-between;
        margin: 0 auto;
 }
@@ -109,7 +109,7 @@
   line-height: 16px;
   margin: 0;
   letter-spacing: 0.8px;
-  padding: 0;
+  padding-top: 3px;
   color: #1b2d37;
   text-transform: uppercase;
 }
@@ -179,7 +179,7 @@
         .page-footer__header-wrapper {
         display: flex;
         width: 100%;
-        padding: 0 25px 24px;
+        padding: 0 8px 24px 24px;
         align-items: center;
         justify-content: space-between;
         position: relative;
@@ -191,15 +191,19 @@
                 width: 200px;
         }
 
+        .page-footer__logo-title {
+                margin-top: 0;
+        }
+
         .page-footer__header-text {
                 display: block;
                 margin: 0;
                 font-size: 0.81em;
                 line-height: 24px;
-                letter-spacing: 0.5px;
+                letter-spacing: 1px;
                 text-transform: uppercase;
                 position: relative;
-                left: 14px;
+                left: 22px;
                 top: 2px;
         }
 
@@ -245,6 +249,10 @@
                 padding: 21px 25px;
         }
 
+        .page-footer__copyright-text ul {
+                letter-spacing: 1px;
+        }
+
         .page-footer__copyright-text--left {
                 display: none;
         }
@@ -256,7 +264,7 @@
 
 @media screen and (max-width: 767px) {
         .page-footer__content {
-                padding-top: 46px;
+                padding-top: 49px;
         }
 
         .page-footer__header-wrapper {
@@ -274,18 +282,51 @@
           }
         }
 
-        .page-footer__header {
+        .page-footer__logo-title {
+                font-size: 1.58rem;
+                line-height: 87%;
+        }
+
+        .page-footer__list-header,
+        .page-footer__address-header {
                 display: flex;
                 justify-content: space-between;
+                position: relative;
+
+                &::before {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      right: 2px;
+                      width: 16px;
+                      height: 16px;
+                      background-image: url("../img/icons/icon-minus.svg");
+                      background-repeat: no-repeat;
+                      background-position: 50%;
+                }
+
+                &.btn-close::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 2px;
+                  width: 16px;
+                  height: 16px;
+                  background-image: url("../img/icons/icon-plus.svg");
+                  background-repeat: no-repeat;
+                  background-position: 50%;
+                }             
         }
 
         .page-footer__header-text {
                 margin-top: 26px;
                 position: static;
+                letter-spacing: 1.1px;
         }
 
         .page-footer__social-icons {
           margin-top: 32px;
+          margin-left: 15px;
         }
 
         .page-footer__block-group {
@@ -295,7 +336,7 @@
 
         .page-footer__col.col-list,
         .page-footer__col.col-adress {
-                padding: 26px 15px 0;
+                padding: 27px 15px 0;
                 border-bottom: 1px solid rgba($color: #626962, $alpha: 0.2);
 
                 h3 {
@@ -314,6 +355,10 @@
                 transition: all 0.3s ease;
         }
 
+        .page-footer__copyright-text ul {
+                font-size: .86em;
+        }
+
         .page-footer__copyright-text--right {
                 display: flex;
                 justify-content: center;
@@ -322,7 +367,8 @@
                   flex-direction: column;
 
                   li {
-                    margin-bottom: 20px;
+                    margin-top: 9px;
+                    margin-bottom: 12px;
                     align-self: center;
 
                     &:last-child {
@@ -334,33 +380,7 @@
 
         .page-footer__address-toggle,
         .page-footer__list-toggle {
-          display: block;
-          width: 20px;
-          height: 20px;
-          position: relative;
-          background-color: transparent;
-          border: none;
-
-          &::before {
-            content: "";
-            width: 16px;
-            height: 2px;
-            position: absolute;
-            background-color: #c4c4c4;
-            left: 2px;
-            top: 10px;
-          }
-        }
-
-        .btn-close::after {
-          content: "";
-          position: absolute;
-          width: 16px;
-          height: 2px;
-          background-color: #c4c4c4;
-          transform: rotate(90deg);
-          left: 2px;
-          top: 10px;
+          display: none;
         }
 
         .close {
@@ -372,6 +392,6 @@
         .open {
           height: auto;
           overflow: hidden;
-          padding: 0 0 26px 0;
+          padding: 2px 0 26px;
         }
 }

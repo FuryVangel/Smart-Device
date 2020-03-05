@@ -27,14 +27,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 25px;
+        padding-left: 26px;
 }
 
 .page-header__logo-text {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 16px;
+  padding-top: 8px;
 }
 
 .page-header__logo-title {
@@ -45,7 +46,7 @@
 }
 
 .page-header__logo-subtitle {
-        font-size: 0.75em;
+        font-size: 0.85em;
         color: #788891;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .page-header__list {
-        margin-left:  50px;
+        margin-left:  47px;
         font-size: 1rem;
 }
 
@@ -74,7 +75,7 @@
           content: ""; 
           display: block;
           position: absolute;
-          left: -35px;
+          left: -42px;
           top: 3px;
           width: 20px;
           height: 18px;
@@ -118,9 +119,9 @@
 }
 
 .page-header__button {
-       font-size: 0.875em;
+       font-size: 0.86em;
        font-weight: bold;
-       padding: 16px 27px;       
+       padding: 16px 27px 12px;       
 
         &:hover,
         &:focus {
@@ -145,9 +146,22 @@
                 }
         }
 
+        .page-header {
+                margin: 18px auto 0;
+        }
+
         .page-header__logo img {
           width: 52px;
           height: 52px;
+        }
+        
+        .page-header__logo-text {
+                margin-left: 16px;
+                padding-top: 0;
+        }
+
+        .page-header__logo-subtitle {
+                letter-spacing: .7px;
         }
 
         .page-header__nav {
@@ -160,8 +174,8 @@
 
         .page-header__email-link {
                 position: absolute;
-                right: 45px;
-                bottom: 15px;
+                right: 30px;
+                bottom: 14px;
 
                 &::before {
                         width: 26px;
@@ -183,7 +197,7 @@
                 &:before {
                         width: 24px;
                         height: 24px;
-                        left: 26px;
+                        left: 31px;
                         background: url("../img/icons/icon-phone-tablet.svg");
                 }
 
@@ -200,7 +214,7 @@
 @media screen and (max-width: 767px) {
         .page-header__wrapper {
                 background-image: url("../img/printboard-mobile.png"), url("../img/hero-mask-tablet.png");
-                background-position: right calc(50% - 125px) top -190px, center 0;
+                background-position: right calc(50% - 80px) top -185px, center 0;
 
                 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
                         background-image: url("../img/printboard-mobile@x2.png"), url("../img/hero-mask-tablet@x2.png");
@@ -231,6 +245,19 @@
         }
 
         .page-header__email-link {
-                right: 10px;
+                right: 45px;
+                bottom: 15px;
+                &:before {
+                        left: -25px;
+                }
         }
+
+        .page-header__phone-link {
+                bottom: 16px;
+                &:before {
+                        left: 38px;
+                }
+        }
+
+
 }

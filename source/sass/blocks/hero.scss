@@ -7,7 +7,7 @@
         flex-direction: column;
         position: relative;
         margin: 236px auto 0;
-        padding: 0 27px 90px;
+        padding: 0 23px 90px;
         max-width: 1464px;
         z-index: 10;
 
@@ -16,9 +16,9 @@
                 font-size: 5rem;
                 color: $white;
                 font-family: "Roboto Condensed", "Arial", sans-serif;
-                letter-spacing: 7.4px;
+                letter-spacing: 6px;
                 text-transform: uppercase;
-                padding-bottom: 30px;
+                padding-bottom: 24px;
         }
 
         p {
@@ -28,9 +28,9 @@
                 font-size: 22px;
                 position: relative;
                 line-height: 156.8%;
-                margin-left: 120px;                
+                margin-left: 100px;                
                 width: 620px;
-                padding-bottom: 45px;
+                padding-bottom: 44px;
 
                 &::before {
                   content: "";
@@ -39,8 +39,8 @@
                   width: 66px;
                   height: 2px;
                   background-color: #ffffff;
-                  left: -115px;
-                  top: 15px;
+                  left: -99px;
+                  top: 16px;
                 }
         }
 }
@@ -51,8 +51,8 @@
         background-color: $accent-color;
         padding: 20px 27px;
         letter-spacing: .9px;
-        margin: 0 0 0 120px;
-        width: 379px;
+        margin: 0 0 0 98px;
+        width: 408px;
         border: $accent-color;
 
         &:hover,
@@ -78,7 +78,7 @@
         transform: rotate(-90deg);
         color: $white;
         opacity: 0.5;
-        margin: 170px 0 0 13px;
+        margin: 166px 0 0 19px;
         transform-origin: left bottom;
 
         &:hover {
@@ -100,8 +100,8 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                margin: 116px 0 0 66px;
-                padding: 0 27px 90px;
+                margin: 115px 0 0 60px;
+                padding: 0 27px 160px;
                 max-width: 1464px;
                 z-index: 10;
 
@@ -109,7 +109,7 @@
                         display: flex;
                         flex-direction: column;
                         font-size: 3.75rem;
-                        margin-bottom: 0;
+                        margin-bottom: 4px;
                 }
 
                 p {
@@ -117,19 +117,19 @@
                         position: relative;
                         margin-left: 50px;                
                         width: 356px;
-                        padding-bottom: 45px;
+                        padding-bottom: 52px;
 
                         &::before {
                                 width: 33px;
                                 left: -45px;
-                                top: 12px;
+                                top: 16px;
                         }
                 }
         
         }
 
         .hero__button {
-                margin-left: 50px; 
+                margin-left: 55px; 
                 width: 379px;          
         }
 
@@ -140,7 +140,7 @@
 
 @media screen and (max-width: 767px) {
         .hero__title {
-                margin: 250px 0 0 0;
+                margin: 232px 0 0 0;
                 padding: 0 16px 71px;
                 max-width: 1464px;
                 z-index: 10;
@@ -148,7 +148,7 @@
                 h1 { 
                         font-size: 2.5rem;
                         letter-spacing: 3px;
-                        margin-bottom: 30px;
+                        margin-bottom: 0;
                         margin-left: 0;
                 }
 
@@ -158,12 +158,12 @@
                         position: relative;
                         margin-left: 50px;                
                         width: 245px;
-                        padding-bottom: 45px;
+                        padding-bottom: 42px;
 
                         &::before {
                                 width: 33px;
-                                left: -45px;
-                                top: 12px;
+                                left: -48px;
+                                top: 16px;
                         }
                 }
         
@@ -171,7 +171,9 @@
 
         .hero__button {
                 margin: 0; 
-                width: 285px;          
+                width: 285px;      
+                margin-left: 4px;   
+                padding: 18px 0; 
         }
 
         .hero__button-desktop {

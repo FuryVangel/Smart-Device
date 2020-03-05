@@ -17,8 +17,8 @@ var heroScrollButton = document.querySelector('.hero__button');
 var advantages = document.querySelector('#advantages');
 var support = document.querySelector('#support');
 var address = document.querySelector('.col-adress .page-footer__list');
-var addressToggle = document.querySelector('.page-footer__address-toggle');
-var listToggle = document.querySelector('.page-footer__list-toggle');
+var addressToggle = document.querySelector('.js-toggle-address');
+var listToggle = document.querySelector('.js-toggle-list');
 var list = document.querySelector('.col-list .page-footer__list');
 
 // Открытие модального окна
@@ -75,7 +75,7 @@ if (heroScroll) {
   heroScroll.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollBy({
-      top: (advantages.offsetTop - window.scrollY),
+      top: (advantages.offsetTop - window.pageYOffset),
       behavior: 'smooth'
     });
     body.classList.remove('overflow');
@@ -86,7 +86,7 @@ if (heroScrollButton) {
   heroScrollButton.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollBy({
-      top: (support.offsetTop - window.scrollY),
+      top: (support.offsetTop - window.pageYOffset),
       behavior: 'smooth'
     });
     body.classList.remove('overflow');
@@ -122,15 +122,15 @@ addressToggle.addEventListener('click', function () {
   if (address.classList.contains('close') || list.classList.contains('open')) {
     address.classList.remove('close');
     address.classList.add('open');
-    addressToggle.classList.remove('toggle-close');
+    addressToggle.classList.remove('btn-close');
 
     list.classList.remove('open');
     list.classList.add('close');
-    listToggle.classList.add('toggle-close');
+    listToggle.classList.add('btn-close');
 
   } else {
     address.classList.remove('open');
     address.classList.add('close');
-    addressToggle.classList.add('toggle-close');
+    addressToggle.classList.add('btn-close');
   }
 });

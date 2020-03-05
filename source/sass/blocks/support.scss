@@ -14,7 +14,7 @@
 .support__wrapper {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 93px 25px 111px;
+  padding: 100px 25pxgit  111px;
   display: flex;
   justify-content: flex-end;
   position: relative;       
@@ -62,7 +62,11 @@
   .support__wrapper {
     width: 100%;
     justify-content: center;
-    padding: 80px 25px 103px;
+    padding: 80px 25px 80px;
+
+    form {
+      width: 590px;
+    }
   }
 
    .support-form__title {
@@ -70,6 +74,7 @@
 
     h3 {
       font-size: 2rem;
+      margin-bottom: 18px;
     }
 
     p {
@@ -81,7 +86,7 @@
 
 @media screen and (max-width: 767px) {
   .support__wrapper {
-    padding: 30px 15px 42px;
+    padding: 30px 15px 22px;
   }
 
   .support-form{
@@ -90,6 +95,11 @@
 
   .support-form__title {
     margin-bottom: 25px;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 13px;
+    }
   }
 
   .support__wrapper form {

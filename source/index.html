@@ -57,30 +57,30 @@
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <svg class="advantages__icon advantages__icon--stopwatch" width="29" height="35" viewBox="0 0 29 35">
+              <svg class="advantages__icon" width="29" height="35" viewBox="0 0 29 35">
                 <use xlink:href="#icon-stopwatch"></use>
               </svg>             
               <h3>Оперативные сроки </h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
                 доставлять заказы плат и комплектующих в самые короткие сроки.</p>
             </li>
-            <li class="advantages__item">
-              <svg class="advantages__icon advantages__icon--hired" width="35" height="35" viewBox="0 0 35 35">
+            <li class="advantages__item advantages__item--hired">
+              <svg class="advantages__icon" width="35" height="35" viewBox="0 0 35 35">
                 <use xlink:href="#icon-hired"></use>
               </svg>
               <h3>Крупные поставщики</h3>
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
                 Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
-            <li class="advantages__item">
-              <svg class="advantages__icon advantages__icon--detective" width="36" height="31" viewBox="0 0 37 32">
+            <li class="advantages__item advantages__item--detective">
+              <svg class="advantages__icon" width="36" height="31" viewBox="0 0 37 32">
                 <use xlink:href="#icon-detective"></use>
               </svg>
               <h3>Полная конфиденциальность</h3>
               <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
             </li>
-            <li class="advantages__item">
-              <svg class="advantages__icon advantages__icon--tag" width="35" height="35" viewBox="0 0 35 35">
+            <li class="advantages__item advantages__item--tag">
+              <svg class="advantages__icon" width="35" height="35" viewBox="0 0 35 35">
                 <use xlink:href="#icon-tag"></use>
               </svg>
               <h3>Персонализация стоимости</h3>
@@ -104,7 +104,7 @@
       <div class="goods__wrapper">
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <div class="goods-list">
-          <a class="goods-item" href="#">
+          <a class="goods-item goods-item--left" href="#">
             <picture>
               <source srcset="img/item1@1x.webp 1x, img/item1@2x.webp 2x"
                 type="image/webp">
@@ -112,7 +112,7 @@
             </picture>
             <p>Производство печатных плат</p>
           </a>
-          <a class="goods-item" href="#">
+          <a class="goods-item goods-item--center" href="#">
             <picture>
               <source srcset="img/item2@1x.webp 1x, img/item2@2x.webp 2x"
                 type="image/webp">
@@ -120,14 +120,14 @@
             </picture>
             <p>Монтаж печатных плат</p>
           </a>
-          <a class="goods-item" href="#">
+          <a class="goods-item goods-item--right" href="#">
             <picture>
               <source srcset="img/item3@1x.webp 1x, img/item3@2x.webp 2x"
                 type="image/webp">
               <img src="img/item3.png" width="370" height="620" alt="Комплектующие для светотехники">
             </picture>
-            <p>Комплектующие для светотехники</p>
-          </a>
+            <p class="goods-item__text">Комплектующие для светотехники</p>
+          </a>             
         </div>
       </div>      
     </section>
@@ -148,7 +148,7 @@
             <textarea name="message" id="message" placeholder="Ваш вопрос" autocapitalize="sentences" required></textarea>
             <div class="form__agreement">
               <button class="form__btn cta-btn" type="submit">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked required>
               <label for="agreement">Я согласен на обработку персональных данных</label>
             </div>
           </form>
@@ -195,9 +195,9 @@
       </div>
       <div class="page-footer__block-group" role="navigation" aria-label="Меню навигации футера">
         <div class="page-footer__col col-list">
-            <div class="page-footer__header">
+            <div class="page-footer__list-header js-toggle-list  btn-close">
               <h3>Разделы сайта</h3>
-              <button class="page-footer__list-toggle btn-close"
+              <button class="page-footer__list-toggle"
                 aria-label="Открытие/закрытие списка навигации"></button>
             </div>
             <div class="page-footer__list close">
@@ -215,9 +215,9 @@
             </div>            
         </div>
         <div class="page-footer__col col-adress">
-          <div class="page-footer__header">
+          <div class="page-footer__address-header js-toggle-address btn-close">
             <h3>Наш офис</h3>
-            <button class="page-footer__address-toggle btn-close" aria-label="Открытие/закрытие списка навигации"></button>
+            <button class="page-footer__address-toggle" aria-label="Открытие/закрытие списка навигации"></button>
           </div>
           <div class="page-footer__list close">
             <ul>
@@ -264,7 +264,7 @@
           required></textarea>
         <div class="form__agreement">
           <button class="form__btn cta-btn" type="submit">Отправить</button>
-          <input class="visually-hidden" type="checkbox" name="agreement-modal" id="agreement-modal" checked>
+          <input class="visually-hidden" type="checkbox" name="agreement-modal" id="agreement-modal" checked required>
           <label for="agreement-modal">Я согласен на обработку персональных данных</label>
         </div>
       </form>
