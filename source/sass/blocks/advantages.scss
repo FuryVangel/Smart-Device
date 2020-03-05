@@ -92,20 +92,27 @@
             font-size: 1.5em;
             color: $accent-color;
             line-height: 21.4px;
-            margin: 16px 0 18px;
+            margin: 16px 0 16px;
           }
 
           p {
             line-height: 22px;
-            letter-spacing: .4px;
+            letter-spacing: .2px;
           }
         }
 
         .advantages__item--detective {
                 h3 {
-                        margin: 12px 0 20px;
+                        margin: 10px 0 20px;
                         letter-spacing: 0.2px;
                 }
+        }
+
+        .advantages__item--hired {
+          h3 {
+            margin: 13px 0 18px;
+            letter-spacing: 0.2px;
+          }
         }
 
         .advantages__item--tag {

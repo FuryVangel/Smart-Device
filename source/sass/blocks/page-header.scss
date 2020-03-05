@@ -1,4 +1,4 @@
-.page-header__wrapper {
+.page-header-wrapper {
         width: 100%;
         padding-top: 1px;
         background-color: $hero-bg-color;
@@ -42,7 +42,7 @@
         font-size: 1.56em;
         font-weight: bold;
         font-family: "Roboto Condensed", "Aria", sans-serif;
-        color: $white;
+        color: $white;        
 }
 
 .page-header__logo-subtitle {
@@ -136,7 +136,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-        .page-header__wrapper {
+        .page-header-wrapper {
                 background-image: url("../img/printboard-tablet.png"), url("../img/hero-mask-tablet.png");
                 background-position: right calc(50% - 225px) top -39px, center 0;
 
@@ -160,8 +160,12 @@
                 padding-top: 0;
         }
 
+        .page-header__logo-title {
+                padding-top: 6px;
+        }
+
         .page-header__logo-subtitle {
-                letter-spacing: .7px;
+                letter-spacing: .1px;
         }
 
         .page-header__nav {
@@ -212,7 +216,7 @@
 }
 
 @media screen and (max-width: 767px) {
-        .page-header__wrapper {
+        .page-header-wrapper {
                 background-image: url("../img/printboard-mobile.png"), url("../img/hero-mask-tablet.png");
                 background-position: right calc(50% - 80px) top -185px, center 0;
 

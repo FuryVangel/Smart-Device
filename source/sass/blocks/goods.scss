@@ -6,7 +6,7 @@
 .goods__wrapper {
         max-width: 1170px;
         margin: 0 auto;
-        padding: 98px 25px 97px;       
+        padding: 94px 0 97px;       
 
         h2 {
           font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -110,13 +110,13 @@
 
 @media screen and (max-width: 1023px) {
         .goods__wrapper {
-                padding: 55px 20px 60px;
+                padding: 55px 25px 60px;
 
                 h2 {
                   font-size: 1.8rem;
-                  margin-left: 10px;
-                  margin-bottom: 60px;
+                  margin-bottom: 52px;
                   letter-spacing: 1.5px;
+                  line-height: 148%;
                   max-width: 613px;
                 }
         }
@@ -145,8 +145,8 @@
                 }
 
                 p {
-                        top: 40px;
-                        left: 50px;
+                        top: 41px;
+                        left: 47px;
                 }
         }
 
@@ -160,20 +160,20 @@
         }
 
         .goods-item--right p {
-               top: 52px;
-               left: 50px;
+               top: 55px;
+               left: 48px;
         }
 
 }
 
 @media screen and (max-width: 767px) {
         .goods__wrapper {
-               padding-bottom: 45px; 
+               padding: 52px 15px 45px 17px; 
 
                h2 {
                  font-size: 1.5rem;
                  margin-left: 10px;
-                 margin-bottom: 42px;
+                 margin-bottom: 48px;
                  line-height: 38px;
                }
         }
@@ -186,13 +186,12 @@
 
         .goods-item {
                 p {
-                  top: 21px;
+                  top: 19px;
                   left: 35px;
                 }
 
                 .goods-item__text {
                         top: 31px;
                 }
-        }
-         
+        }         
 }

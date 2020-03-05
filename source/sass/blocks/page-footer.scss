@@ -108,6 +108,8 @@
   font-size: 0.937rem;
   line-height: 16px;
   margin: 0;
+  padding-bottom: 22px;
+  padding-left: 4px;
   letter-spacing: 0.8px;
   padding-top: 3px;
   color: #1b2d37;
@@ -115,7 +117,8 @@
 }
 
 .page-footer__col.col-list {
-        margin-right: 50px;
+        margin-right: 53px;
+        padding-left: 5px;
 }
 
 .col-list .page-footer__list {
@@ -195,6 +198,11 @@
                 margin-top: 0;
         }
 
+        .page-footer__logo-subtitle {
+                line-height: 165%;
+                letter-spacing: .6px;
+        }
+
         .page-footer__header-text {
                 display: block;
                 margin: 0;
@@ -213,7 +221,7 @@
                 justify-content: space-between;
                 flex-grow: 1;
                 margin-left: 0;
-                padding: 35px 25px 36px;
+                padding: 35px 25px 36px 20px;
         }
 
         .page-footer__col.col-list {
@@ -224,6 +232,12 @@
                 h3 {
                 margin-left: 2px;
                 }
+        }
+
+        .page-footer__col h3 {
+                padding-left: 2px;
+                padding-bottom: 25px;
+                padding-top: 3px;
         }
 
         .col-list .page-footer__list {
@@ -341,13 +355,18 @@
 
                 h3 {
                   margin-left: 0;
-                  margin-bottom: 27px;
+                  margin-bottom: 0;
                 }
         }
 
         .page-footer__col.col-adress {
                 margin-right: 0;
                 border-bottom: none;
+                padding-top: 25px;
+        }
+
+        .page-footer__col h3 {
+                padding-bottom: 27px;
         }
 
         .col-list .page-footer__list,
@@ -376,11 +395,6 @@
                     }
                   }
                 }
-        }
-
-        .page-footer__address-toggle,
-        .page-footer__list-toggle {
-          display: none;
         }
 
         .close {

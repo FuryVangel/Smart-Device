@@ -40,8 +40,14 @@
 
   .form__agreement {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column; 
+    position: relative;
+    
+    input {
+      left: 4%;
+      bottom: -30%;
+    } 
+    
     .form__btn {
       margin-bottom: 30px;
       width: 100%;
@@ -83,6 +89,7 @@
    border: 0;
    cursor: pointer;
    font-size: 0;
+   outline: 0;
 }
 
 .overflow {

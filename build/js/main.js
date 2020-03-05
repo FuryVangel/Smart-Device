@@ -5,17 +5,7 @@ var modalShow = document.querySelector('.modal');
 var modalClose = document.querySelector('.modal-window__close-btn');
 var modalOverlay = document.querySelector('.modal-overlay');
 var body = document.querySelector('body');
-var modalForm = modalShow.querySelector('.modal form');
 var nameModal = modalShow.querySelector('[name=name-modal]');
-var phoneModal = modalShow.querySelector('[name=phone-modal]');
-var messageModal = modalShow.querySelector('[name=message-modal]');
-var storageName = localStorage.getItem('name');
-var storagePhone = localStorage.getItem('phone');
-var storageMessage = localStorage.getItem('message');
-var heroScroll = document.querySelector('.hero__scroll');
-var heroScrollButton = document.querySelector('.hero__button');
-var advantages = document.querySelector('#advantages');
-var support = document.querySelector('#support');
 var address = document.querySelector('.col-adress .page-footer__list');
 var addressToggle = document.querySelector('.js-toggle-address');
 var listToggle = document.querySelector('.js-toggle-list');
@@ -27,11 +17,6 @@ modalOpen.addEventListener('click', function (evt) {
   modalShow.classList.add('modal-overlay--show');
   nameModal.focus();
   body.classList.add('overflow');
-  if (storageName && storagePhone && storageMessage) {
-    nameModal.value = storageName;
-    phoneModal.value = storagePhone;
-    messageModal.value = storageMessage;
-  }
 });
 
 modalShow.querySelector('.modal-window').addEventListener('click', function (e) {
@@ -62,36 +47,29 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
-// Хранение данных в localStorage
-modalForm.addEventListener('submit', function (evt) {
-  evt.preventDefault();
-  localStorage.setItem('name', nameModal.value);
-  localStorage.setItem('phone', phoneModal.value);
-  localStorage.setItem('message', messageModal.value);
+// Поддержка плавного скролла в IE11
+var scrolls = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+var animationTime = 600;
+var framesCount = 30;
+
+scrolls.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+
+    var scroller = setInterval(function () {
+      var scrollBy = coordY / framesCount;
+
+      if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+        window.scrollBy(0, scrollBy);
+      } else {
+        window.scrollTo(0, coordY);
+        clearInterval(scroller);
+      }
+    }, animationTime / framesCount);
+  });
 });
-
-// Скрол
-if (heroScroll) {
-  heroScroll.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollBy({
-      top: (advantages.offsetTop - window.pageYOffset),
-      behavior: 'smooth'
-    });
-    body.classList.remove('overflow');
-  });
-}
-
-if (heroScrollButton) {
-  heroScrollButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollBy({
-      top: (support.offsetTop - window.pageYOffset),
-      behavior: 'smooth'
-    });
-    body.classList.remove('overflow');
-  });
-}
 
 // Валидация для телефона
 IMask(document.querySelector('#phone'), {
@@ -101,7 +79,7 @@ IMask(document.querySelector('#phone-modal'), {
   mask: '+{7}(000)000-00-00'
 });
 
-// Открытие/закрытие аккордиона
+// Открытие/закрытие аккордеона
 listToggle.addEventListener('click', function () {
   if (list.classList.contains('close') || address.classList.contains('open')) {
     list.classList.remove('close');
@@ -134,3 +112,21 @@ addressToggle.addEventListener('click', function () {
     addressToggle.classList.add('btn-close');
   }
 });
+
+// Хранение данных в localStorage
+var dataItems = document.querySelectorAll('input, textarea');
+
+function checkValidity() { }
+
+if (dataItems) {
+  for (var i = 0; i < dataItems.length; i++) {
+    (function (item) {
+      var id = dataItems.getAttribute('id');
+      item.value = localStorage.getItem(id);
+      item.oninput = function () {
+        localStorage.setItem(id, dataItems.value);
+        checkValidity();
+      };
+    })(dataItems[i]);
+  }
+}

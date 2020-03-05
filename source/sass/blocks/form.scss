@@ -5,7 +5,7 @@
 input,
 textarea {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   padding: 14px 16px;
   background-color: #19baff;
   font-family: "PT Mono", "Arial", sans-serif;
@@ -33,7 +33,7 @@ textarea {
 
 .form__agreement {
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 .form__btn {
@@ -102,13 +102,18 @@ textarea {
 
 @media screen and (max-width: 1023px) {
   textarea {
-  margin-bottom: 48px;
+  margin-bottom: 43px;
   min-height: 164px;
+  padding: 15px 20px;
   }
 
   .form__btn {
     min-width: 280px;
     margin-right: 45px;
+  }
+
+  [type="checkbox"]+label {
+    padding-left: 32px;
   }
 }
 

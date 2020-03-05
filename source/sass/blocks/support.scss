@@ -14,7 +14,7 @@
 .support__wrapper {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 100px 25pxgit  111px;
+  padding: 100px 0 111px;
   display: flex;
   justify-content: flex-end;
   position: relative;       
@@ -28,7 +28,7 @@
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 140.6%;
-    margin: 0 0 10px -3px;
+    margin: -4px 0 6px 2px;
     color: $white;
   }
 
@@ -50,9 +50,19 @@
   margin-bottom: 20px;  
 }
 
+.support-form .form__agreement {
+  position: relative;
+
+  input {
+    left: 56%;
+    bottom: 20%;
+  }
+}
+
 .support-form:not(.modal-window) [type="text"],
 .support-form:not(.modal-window) [type="tel"] {
   width: calc(50% - 15px);
+  padding: 9px 20px 15px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -62,7 +72,7 @@
   .support__wrapper {
     width: 100%;
     justify-content: center;
-    padding: 80px 25px 80px;
+    padding: 87px 25px 84px;
 
     form {
       width: 590px;
@@ -74,19 +84,28 @@
 
     h3 {
       font-size: 2rem;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
+      margin-left: -2px;
+      letter-spacing: .1px;
     }
 
     p {
       font-size: 1em;
       line-height: 134%;
+      margin-left: 3px;
     }
+   }
+
+   .support-form:not(.modal-window) [type="text"],
+   .support-form:not(.modal-window) [type="tel"] {
+     width: calc(50% - 19px);
+     padding: 14px 20px 15px;
    }
 }
 
 @media screen and (max-width: 767px) {
   .support__wrapper {
-    padding: 30px 15px 22px;
+    padding: 30px 17px 22px;
   }
 
   .support-form{
@@ -98,7 +117,12 @@
 
     h3 {
       font-size: 1.8rem;
-      margin-bottom: 13px;
+      margin-bottom: 15px;
+      letter-spacing: -.2px;
+    }
+
+    p {
+      margin-left: 0;
     }
   }
 
@@ -107,8 +131,14 @@
     flex-direction: column;
   }
 
+  .support-form .form__agreement input {
+    left: 2%;
+    bottom: 10%;
+  }
+
   .support-form:not(.modal-window) [type="text"],
   .support-form:not(.modal-window) [type="tel"] {
     width: 100%;
+    padding: 16px 18px 15px;
   }
 }
