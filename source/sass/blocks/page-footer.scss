@@ -5,6 +5,7 @@
 .page-footer__content,
 .page-footer__copyright {
         display: flex;
+        justify-content: space-between;
         font-family: "PT Mono", "Arial", sans-serif;
         font-weight: 400;
         line-height: 25px;
@@ -35,7 +36,7 @@
 
 .page-footer__header-wrapper {
         color: rgba(11, 18, 22, 0.5);
-        width: 220px;
+        width: 380px;
 }
 
 .page-footer__header-text {
@@ -61,7 +62,6 @@
         font-family: "Roboto Condensed", "Arial", sans-serif;
         font-weight: 700;
         font-size: 1.56rem;
-        margin-top: 2px;
         color: #203c42;
 }
 
@@ -98,18 +98,15 @@
 .page-footer__block-group {
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
-  margin-left: 201px;
 }
 
 .page-footer__col h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 0.937rem;
+  font-size: 15px;
   line-height: 16px;
   margin: 0;
   padding-bottom: 22px;
-  padding-left: 4px;
   letter-spacing: 0.8px;
   padding-top: 3px;
   color: #1b2d37;
@@ -117,27 +114,15 @@
 }
 
 .page-footer__col.col-list {
-        margin-right: 53px;
-        padding-left: 5px;
+        padding-right: 43px;
+}
+
+.col-list .page-footer__list li {
+        margin-right: 65px;
 }
 
 .col-list .page-footer__list {
-        display: flex;
-        justify-content: space-between;
-
-        ul:first-child {
-          min-width: 180px;
-          margin-right: 75px;
-        }
-
-        ul + ul {
-          line-height: 172%;
-          letter-spacing: 0.5px;
-        }
-}
-
-.page-footer__col .col-adress {
-        margin-left: auto;
+        column-count: 2;
 }
 
 .page-footer__copyright {
@@ -155,7 +140,7 @@
 }
 
 .page-footer__copyright-text ul {
-        font-size: 0.81em;
+        font-size: 13px;
         line-height: 24px;
         letter-spacing: 0.5px;
         display: flex;
@@ -176,7 +161,7 @@
 @media screen and (max-width: 1023px) {
         .page-footer__content {
                 flex-direction: column;
-                padding: 20px 0 0;
+                padding: 22px 0 0;
         }
 
         .page-footer__header-wrapper {
@@ -195,7 +180,7 @@
         }
 
         .page-footer__logo-title {
-                margin-top: 0;
+                letter-spacing: .1px;
         }
 
         .page-footer__logo-subtitle {
@@ -211,8 +196,8 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 position: relative;
-                left: 22px;
-                top: 2px;
+                left: 17px;
+                top: 3px;
         }
 
         .page-footer__block-group {
@@ -228,6 +213,7 @@
                 display: flex;
                 flex-direction: column;
                 margin: 0;
+                padding-left: 5px;
 
                 h3 {
                 margin-left: 2px;
@@ -235,7 +221,6 @@
         }
 
         .page-footer__col h3 {
-                padding-left: 2px;
                 padding-bottom: 25px;
                 padding-top: 3px;
         }
@@ -244,6 +229,7 @@
                 flex-direction: column;
                 margin-right: 0;
                 justify-content: flex-start;
+                column-count: 1;
 
                 ul + ul {
                   letter-spacing: 0;
@@ -260,11 +246,11 @@
         }
 
         .page-footer__copyright-wrapper {
-                padding: 21px 25px;
+                padding: 23px 24px 23px 26px;
         }
 
         .page-footer__copyright-text ul {
-                letter-spacing: 1px;
+                letter-spacing: .5px;
         }
 
         .page-footer__copyright-text--left {
@@ -296,9 +282,15 @@
           }
         }
 
+        .page-footer__logo-text {
+                left: 70px;
+        }
+
         .page-footer__logo-title {
                 font-size: 1.58rem;
                 line-height: 87%;
+                letter-spacing: normal;
+                padding-bottom: 2px;
         }
 
         .page-footer__list-header,
@@ -310,7 +302,7 @@
                 &::before {
                       content: "";
                       position: absolute;
-                      top: 0;
+                      top: 2px;
                       right: 2px;
                       width: 16px;
                       height: 16px;
@@ -322,7 +314,7 @@
                 &.btn-close::before {
                   content: "";
                   position: absolute;
-                  top: 0;
+                  top: 2px;
                   right: 2px;
                   width: 16px;
                   height: 16px;
@@ -333,7 +325,7 @@
         }
 
         .page-footer__header-text {
-                margin-top: 26px;
+                margin-top: 24px;
                 position: static;
                 letter-spacing: 1.1px;
         }
@@ -350,7 +342,7 @@
 
         .page-footer__col.col-list,
         .page-footer__col.col-adress {
-                padding: 27px 15px 0;
+                padding: 28px 15px 0;
                 border-bottom: 1px solid rgba($color: #626962, $alpha: 0.2);
 
                 h3 {
@@ -406,6 +398,6 @@
         .open {
           height: auto;
           overflow: hidden;
-          padding: 2px 0 26px;
+          padding: 4px 0 25px;
         }
 }

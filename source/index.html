@@ -53,13 +53,14 @@
   </div>
   <main>
     <div class="page-content">
-      <section class="advantages" id="advantages">
+      <div class="page-content__wrapper">
+        <section class="advantages" id="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
               <svg class="advantages__icon" width="29" height="35" viewBox="0 0 29 35">
                 <use xlink:href="#icon-stopwatch"></use>
-              </svg>             
+              </svg>
               <h3>Оперативные сроки </h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
                 доставлять заказы плат и комплектующих в самые короткие сроки.</p>
@@ -88,8 +89,8 @@
                 устраивает.</p>
             </li>
           </ul>
-      </section>
-      <section class="about">
+        </section>
+        <section class="about">
           <h2>О компании</h2>
           <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
             1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
@@ -98,34 +99,20 @@
             <span class="about__hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
               клиентов крупнейшие Производители светотехники России.</span></p>
           <a class="about__btn cta-btn" href="#">Подробнее</a>
-      </section>      
-    </div>
+        </section>
+      </div>
+    </div>    
     <section class="goods">
       <div class="goods__wrapper">
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <div class="goods-list">
           <a class="goods-item goods-item--left" href="#">
-            <picture>
-              <source srcset="img/item1@1x.webp 1x, img/item1@2x.webp 2x"
-                type="image/webp">
-              <img src="img/item1.png" width="370" height="620" alt="Производство печатных плат">
-            </picture>
             <p>Производство печатных плат</p>
           </a>
           <a class="goods-item goods-item--center" href="#">
-            <picture>
-              <source srcset="img/item2@1x.webp 1x, img/item2@2x.webp 2x"
-                type="image/webp">
-              <img src="img/item2.png" width="370" height="620" alt="Монтаж печатных плат">
-            </picture>
             <p>Монтаж печатных плат</p>
           </a>
           <a class="goods-item goods-item--right" href="#">
-            <picture>
-              <source srcset="img/item3@1x.webp 1x, img/item3@2x.webp 2x"
-                type="image/webp">
-              <img src="img/item3.png" width="370" height="620" alt="Комплектующие для светотехники">
-            </picture>
             <p class="goods-item__text">Комплектующие для светотехники</p>
           </a>             
         </div>
@@ -140,11 +127,11 @@
             <p>Мы проконсультируем Вас бесплатно</p>
           </div>
           <form class="form" action="#" method="POST">
-            <label class="visually-hidden" for="name">Имя</label>
-            <input type="text" name="name" id="name" placeholder="Имя" autocomplete="off" autocapitalize="sentences" required>
-            <label class="visually-hidden" for="phone">Телефон</label>
-            <input type="tel" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone" id="phone"
+            <div class="form__data">
+              <input type="text" name="name" id="name" placeholder="Имя" autocomplete="off" autocapitalize="sentences" required>
+              <input type="tel" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone" id="phone"
               placeholder="Телефон" autocomplete="off" required>
+            </div>           
             <textarea name="message" id="message" placeholder="Ваш вопрос" autocapitalize="sentences" required></textarea>
             <div class="form__agreement">
               <button class="form__btn cta-btn" type="submit">Задать вопрос</button>
@@ -206,8 +193,6 @@
                 <li><a href="#">Продукты</a></li>
                 <li><a href="#">Производство печатных плат</a></li>
                 <li><a href="#">Монтаж печатных плат</a></li>
-              </ul>
-              <ul>
                 <li><a href="#">Комплектующие</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Контакты</a></li>

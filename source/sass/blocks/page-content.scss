@@ -1,17 +1,21 @@
 .page-content {        
-        width: 90%;
-        max-width: 1170px;
-        margin: 0 auto;
+  background: url("../img/icons/icon-triangle.svg") center no-repeat transparent;
+}
+
+.page-content__wrapper {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1023px) {
-        .page-content {
-          width: 94%;
-        }
+  .page-content__wrapper {
+    width: 94%;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .page-content {
+  .page-content__wrapper {
     margin: 0 10px;
   }
 }

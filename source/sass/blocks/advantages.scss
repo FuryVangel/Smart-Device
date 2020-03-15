@@ -15,7 +15,7 @@
 
 .advantages__item {
         flex-direction: column;
-        width: 48.6%;
+        width: 48.2%;
         min-height: 300px;
         padding: 73px 40px 64px;
         border: 1px solid $border-color;
@@ -23,19 +23,19 @@
         position: relative;
         cursor: pointer;
         transition: all 0.2s;
+        background-color: $white;
 
         &:hover {
                 background-color: $accent-color;
-                color: $white;                
+                color: $white;     
+                transition: all 0.2s;
 
                 h3, p {
                         color: inherit;
-                        transition: all 0.2s;
                 }
 
                 svg {
                         fill: $white;
-                        transition: all 0.2s;
                 }
         }
 
@@ -48,13 +48,14 @@
                 font-weight: 400;
                 color: $accent-color;
                 line-height: 21.4px;
-                margin: 29px 0 27px;
+                margin: 33px 3px 24px;
         }
 
         p {
                 font-size: 1em;
                 font-family: "PT Mono", "Arial", sans-serif;
                 line-height: 21.4px;
+                margin-left: 3px;
                 color: $text-color;        
         }
 
@@ -63,11 +64,41 @@
         }
 }
 
+.advantages__item--hired p {
+        letter-spacing: -.1px;
+        line-height: 22px;
+}
+
+.advantages__item--detective{
+        h3 {
+                margin-top: 32px;
+                margin-bottom: 23px;
+        }
+
+        p {
+          letter-spacing: .4px;
+          line-height: 22px;
+        }
+} 
+
+.advantages__item--tag {
+  h3 {
+        margin-top: 31px;
+        margin-bottom: 22px;
+  }
+
+  p {
+    letter-spacing: .2px;
+    line-height: 22px;
+  }
+}
+
 .advantages__icon {
         fill: $accent-color;
         position: absolute;
         height: 36px;
-        top: 39px;
+        top: 43px;
+        left: 45px;
 
         &:hover {
                 fill: $white;
@@ -97,21 +128,34 @@
 
           p {
             line-height: 22px;
-            letter-spacing: .2px;
+            letter-spacing: .1px;
+            margin-left: 0;
           }
         }
 
         .advantages__item--detective {
                 h3 {
+                        font-size: 1.4em;
                         margin: 10px 0 20px;
-                        letter-spacing: 0.2px;
+                        letter-spacing: 0.8px;
+                        line-height: 22.6px;
+                }
+
+                svg {
+                        top: 20px;
+                        left: 25px;
                 }
         }
 
         .advantages__item--hired {
           h3 {
-            margin: 13px 0 18px;
+            margin: 15px 0 18px;
             letter-spacing: 0.2px;
+          }
+
+          svg {
+                  top: 22px;
+                  left: 28px;
           }
         }
 
@@ -119,13 +163,22 @@
                 padding-left: 30px;
 
                 h3 {
-                        margin: 12px 0 15px;
-                        letter-spacing: 0.2px;            
+                        margin: 12px 0 15px;      
+                }
+
+                svg {
+                       top: 22px;
+                       left: 27px;
+                }
+
+                p {
+                        letter-spacing: -.1px;
                 }
         }
 
         .advantages__icon {
                 top: 23px;
+                left: 27px;
         }
 }
 
@@ -154,7 +207,7 @@
                 h3 {
                         font-size: 1.3em;
                         margin-top: 13px;
-                        margin-bottom: 10px;
+                        margin-bottom: 9px;
                         line-height: 28px;
                 }
 
@@ -168,6 +221,11 @@
         .advantages__item--hired {
                 h3 {
                         margin-top: 15px;
+                        letter-spacing: -.2px;
+                }
+
+                svg {
+                        top: 22px;
                 }
 
                 p {
@@ -183,13 +241,29 @@
                   line-height: 27px;
                   width: 80px;
                   padding-bottom: 10px;
+                  letter-spacing: -.3px;
+                }
+
+                svg {
+                        top: 23px;
+                        left: 26px;
                 }
         }
 
         .advantages__item--tag {
                 h3 {
-                        margin-top: 8px;
+                        margin-top: 11px;
                         margin-bottom: 12px;
+                        letter-spacing: -.3px;
+                }
+
+                p {
+                        letter-spacing: .7px;
+                }
+
+                svg {
+                  top: 24px;
+                  left: 28px;
                 }
         }
 }

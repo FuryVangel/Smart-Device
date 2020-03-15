@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin: 236px auto 0;
+        margin: 234px auto 0;
         padding: 0 23px 90px;
         max-width: 1464px;
         z-index: 10;
@@ -39,8 +39,8 @@
                   width: 66px;
                   height: 2px;
                   background-color: #ffffff;
-                  left: -99px;
-                  top: 16px;
+                  left: -97px;
+                  top: 16.7px;
                 }
         }
 }
@@ -49,7 +49,7 @@
         font-size: 1em;
         font-weight: bold;
         background-color: $accent-color;
-        padding: 20px 27px;
+        padding: 21px 27px 19px;
         letter-spacing: .9px;
         margin: 0 0 0 98px;
         width: 408px;
@@ -100,7 +100,7 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                margin: 115px 0 0 60px;
+                margin: 116px 0 0 63px;
                 padding: 0 27px 162px;
                 max-width: 1464px;
                 z-index: 10;
@@ -109,7 +109,8 @@
                         display: flex;
                         flex-direction: column;
                         font-size: 3.75rem;
-                        margin-bottom: 4px;
+                        margin-bottom: 3px;
+                        letter-spacing: 4px;
                 }
 
                 p {
@@ -121,16 +122,17 @@
 
                         &::before {
                                 width: 33px;
-                                left: -47px;
-                                top: 16px;
+                                left: -50px;
+                                top: 17px;
                         }
                 }
         
         }
 
         .hero__button {
-                margin-left: 55px; 
-                width: 379px;          
+                margin-left: 51px; 
+                width: 380px;       
+                padding: 19px 27px;   
         }
 
         .hero__scroll {
@@ -148,7 +150,7 @@
                 h1 { 
                         font-size: 2.5rem;
                         letter-spacing: 3px;
-                        margin-bottom: 0;
+                        margin-bottom: 1px;
                         margin-left: 0;
                 }
 
