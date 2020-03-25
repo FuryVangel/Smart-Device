@@ -114,19 +114,25 @@ addressToggle.addEventListener('click', function () {
 });
 
 // Хранение данных в localStorage
+if (localStorage.length) {
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    document.getElementById(key).value = localStorage.getItem(key);
+  }
+}
+
 var dataItems = document.querySelectorAll('input, textarea');
-
-function checkValidity() { }
-
 if (dataItems) {
-  for (var i = 0; i < dataItems.length; i++) {
+  for (var j = 0; j < dataItems.length; j++) {
     (function (item) {
-      var id = dataItems.getAttribute('id');
-      item.value = localStorage.getItem(id);
-      item.oninput = function () {
-        localStorage.setItem(id, dataItems.value);
-        checkValidity();
-      };
-    })(dataItems[i]);
+      item.addEventListener('change', function () {
+        var id = item.getAttribute('id');
+        if (item.value) {
+          localStorage.setItem(id, item.value);
+        } else {
+          localStorage.removeItem(id);
+        }
+      });
+    })(dataItems[j]);
   }
 }
